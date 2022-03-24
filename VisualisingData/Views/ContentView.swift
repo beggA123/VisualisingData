@@ -9,8 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            NavigationLink("Stack", destination: StackView())
+        TabView {
+            StackView()
+                .tabItem {
+                    Image(systemName: "rectangle.stack")
+                    Text("Stack")
+                }
+            QueueView()
+                .tabItem {
+                    Image(systemName: "person.2")
+                    Text("Queue")
+                }
         }
     }
 }
